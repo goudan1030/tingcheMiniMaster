@@ -1,0 +1,39 @@
+<view class="flex-col page">
+  <view class="flex-col group_3" >
+    <view class="flex-col section_3">
+      <view class="justify-between">
+        <view class="flex-row">
+          <image
+            src="{{detail.userAva}}"
+            class="image_5"
+          />
+          <text class="text_2">{{detail.username}}</text>
+        </view>
+        <text class="text_3">{{detail.sendtime}}</text>
+      </view>
+      <view class="flex-col group_6">
+        <text class="text_4">{{detail.title}}</text>
+        <text class="text_5">{{detail.content}}</text>
+        <text class="text_6">¥{{detail.price}}.00/月</text>
+        <text class="text_7">距离：500m</text>
+        <text class="text_7" bindtap="getLocation">地址：{{detail.location}}</text>
+      </view>
+    </view>
+    <view class="flex-col section_4">
+      <view class="flex-col items-center">
+        <image
+          src="{{detail.image}}"
+          class="image_6"
+        />
+      </view>
+
+    </view>
+  </view>
+  <image src="../../images/back.svg" class="back" bindtap="back"></image>
+</view>
+<view class="contarea">
+  <view class="btnarea">
+      <view class="btn1" bindtap="getLocation"><text class="text_8">查看地图</text></view>
+      <view class="btn2"  bindtap="phoneCall"><text class="text_9">马上联系</text></view>
+  </view>
+</view>

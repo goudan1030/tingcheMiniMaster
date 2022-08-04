@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="page">
+    <!-- 地图区域 -->
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" 
+    bindmarkertap="markertap" polyline="{{polyline}}" circles="{{circles}}" bindregionchange="regionchange" show-location style="width:100%;height:530px;">
+    </map>
+        <!-- 个人中心 -->
+        <navigator url="../mine/mine">
+        <view class="userarea">
+            <!-- <image class="user" src="../../images/mine.png"></image> -->
+            <image wx:if="{{login==true}}" src="{{userInfo.avatarUrl}}" class="user_true"></image>
+            <image wx:if="{{login==false}}" src="../../images/mine.png" class="user"></image>
+        </view>
+    </navigator>
+    <!-- 搜索区域 -->
+    <view class="justify-between search" bindtap="gotoSearch">
+    <view class="flex-row">
+        <image src="../../images/search.svg" class="searchicon" />
+        <view wx:if="{{chooseLocation==true}}"  class="gotoArea"><text class="textaddress">{{address.address}}</text></view>
+        <view wx:if="{{chooseLocation==false}}" class="gotoArea"><text class="textaddress">请选择地址</text></view>
+    </view>
+    </view>
+    <!-- page.wxml -->
+    <!-- key、referer和hotCitys通过组件的属性传入 -->
+    <selector-component
+    show="{{selectorVisible}}"
+    key='KZKBZ-NEVEU-OD4VQ-BKOEH-LXYDV-6CBUO'
+    referer='停车位出租'
+    bindselect="onSelectCity"
+    ></selector-component>
+    <!-- 加入车位提示 -->
+    <view class="add-tip" animation="{{animationData}}" wx:if="{{addList.length>0}}">
+    <view class="add-left-icon">
+        <image class="" src="{{addCurrent.avatar}}" mode="scaleToFill" />
+    </view>
+    <text>{{addCurrent.desc}}</text>
+    </view>
+
+    <!-- 车位列表 -->
+    <view class="main">
+      <text class="title">附近停车位出租信息</text>
+      <image src="../../images/reflash.png" class="reflash"></image>
+
+      <!-- 车位列表 -->
+      <view>
+        <block wx:for="{{tasks}}" wx:key="{{index}}">
+          <view class="list-item flex-col caritem"  data-index="{{index}}" bindtap="bindDetail">
+            <view>
+              <view class="cartitle">
+                <text>{{item.title}}</text>
+              </view>
+              <view class="excerpt">
+                <text>{{item.content}}</text>
+              </view>
+              <!-- 这里是价格 -->
+              <view>
+                  <text class="carprice">¥{{item.price}}/月</text>
+              </view>
+              <!-- 这里是发布时间 -->
+              <view class="createtime">
+                  <text>{{item.sendtime}}</text>
+              </view>
+            </view>
+          </view>
+      </block>
+      </view>
+      <view class="listfooter" wx:if="{{isLastPage}}">
+			  <text class="info">- 真的没有了! 我是有底线的 -</text>
+		  </view>
+    </view>
+    <!-- 回到当前位置 -->
+    <view catchtap="backLocal">
+        <image src="../../images/location.png" class="location" />
+    </view>
+    <!-- 发布按钮 -->
+    <navigator url="../submit/submit"><image src="../../images/add.png" class="add" /></navigator>
+</view>

@@ -1,0 +1,229 @@
+
+.search {
+    position: fixed;
+    top: 148rpx;
+    width: 90%;
+    height: 88rpx;
+    margin: 5%;
+    padding: 24rpx 28rpx;
+    background-color: #ffffff;
+    border-radius: 12rpx;
+    box-sizing: border-box;
+  }
+  .text-wrapper {
+    width: 112rpx;
+    border-left: solid 2rpx #979797;
+  }
+  .searchicon {
+    margin: 4rpx 0;
+    flex-shrink: 0;
+    width: 32rpx;
+    height: 32rpx;
+  }
+  .textaddress {
+    margin-left: 24rpx;
+    color: #7a7a7a;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .text_1 {
+    color: #7a7a7a;
+    font-size: 28rpx;
+    font-family: 'PingFangSC-Regular';
+    line-height: 40rpx;
+  }
+.location{
+    position: absolute;
+    top: 844rpx;
+    left: 40rpx;
+    width: 60rpx;
+    height: 60rpx;
+}
+  .main{
+    width: 100%;
+      background-color: #F5F5F5;
+      position: absolute;
+      top: 940rpx;
+      padding: 40rpx;
+      border-radius: 24rpx;
+  }
+  .container{
+    background-color: #F5F5F5;
+  }
+  .title{
+    color: #000000;
+    font-size: 32rpx;
+    font-weight: 500;
+    line-height: 44rpx;
+  }
+  .reflash{
+    position: absolute;
+    right: 40rpx;
+    width: 32rpx;
+    height: 32rpx;
+  }
+  .caritem{
+    margin-top: 40rpx;
+    padding: 32rpx 30rpx 24rpx;
+    background-color: #ffffff;
+    border-radius: 16rpx;
+  }
+
+  .createtime{
+    margin-top: 20rpx;
+    color: #dddddd;
+    font-size: 24rpx;
+    line-height: 28rpx;
+  }
+  .cardestence{
+    margin: 8rpx 0 4rpx;
+    color: #dddddd;
+    font-size: 24rpx;
+    line-height: 28rpx;
+  }
+  .cartime{
+    align-self: center;
+    color: #cdcdcd;
+    font-size: 28rpx;
+    line-height: 34rpx;
+  }
+  .carprice{
+    color: #ff9500;
+    font-size: 40rpx;
+    font-weight: 500;
+    line-height: 40rpx;
+  }
+  .lablearea{
+      margin-top: 32rpx;
+      margin-bottom: 20rpx;
+  }
+  .lable{
+    margin-right: 20rpx;
+    padding: 2rpx 0;
+    background-color: #f2f3ff;
+    border-radius: 16rpx;
+    width: 94rpx;
+    height: 32rpx;
+  }
+  .labeltext{
+    color: #0819ff;
+    font-size: 20rpx;
+    font-weight: 500;
+    line-height: 28rpx;
+  }
+.add{
+    position: absolute;
+    top: 802rpx;
+    right: 40rpx;
+    align-self: flex-start;
+    border-radius: 50%;
+    width: 104rpx;
+    height: 104rpx;
+}
+
+.user{
+  position: fixed;
+  top: 104rpx;
+  left: 40rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.group_5{
+    margin-top: 24rpx;
+}
+.user_true{
+    position: fixed;
+    top: 104rpx;
+    left: 40rpx;
+    width: 48rpx;
+    height: 48rpx;
+    border: #fff 1px solid;
+    border-radius: 16rpx;
+}
+.userarea{
+    width: 60rpx;
+    height: 60rpx;
+    position: fixed;
+    top: 104rpx;
+    left: 40rpx;
+}
+
+.gotoArea{
+    height: 88rpx;
+    width: 440rpx;
+}
+
+/* 加入车位提示 */
+.add-tip{
+    width: 500rpx;
+    padding-right: 15rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    background: RGBA(27, 58, 98, 1);
+    border-radius: 24rpx;
+    opacity: 0;
+    position: absolute;
+    top: 10rpx;
+}
+.add-left-icon{
+    width: 32rpx;
+      height: 32rpx;
+      border: 1px solid #c7c7c7;
+      border-radius: 50%;
+      margin: 3px 14rpx 0;
+      float: left;
+      overflow: hidden;
+}
+.image{
+    width: 100%;
+        height: 100%;
+        float: left;
+}
+.text {
+      max-width: 420rpx;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 26rpx;
+      font-weight: 400;
+      color: #ffffff;
+      float: left;
+    }
+.avatar{
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+}
+.cartitle{
+  float: left;
+  /* margin-left: 24rpx; */
+  color: #000000;
+  font-size: 32rpx;
+  font-weight: 500;
+  line-height: 40rpx;
+  margin-bottom: 20rpx;
+}
+.excerpt{
+  color: #CDCDCD;
+  font-size: 28rpx;
+  margin-top: 60rpx;
+  margin-bottom: 40rpx;
+}
+.listfooter{
+  margin-top: 80rpx;
+  color: #c1c1c1;
+  font-size: 32rpx;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+.info{
+  font-size: 24rpx;
+  color: #cdcdcd;
+}

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/mine/mine",
+    "pages/detail/detail",
+    "pages/submit/submit",
+    "pages/uploadFile/index"
+  ],
+  "requiredPrivateInfos":[
+    "chooseLocation",
+    "getLocation"
+  ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "停车位出租",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2",
+    "lazyCodeLoading": "requiredComponents",
+    "permission": {
+        "scope.userLocation": {
+            "desc": "授权位置，查找周边停车位出租信息"
+        }
+    },
+   
+    "plugins": {
+        "citySelector": {
+            "version": "1.0.1",
+            "provider": "wx63ffb7b7894e99ae"
+        },
+        "chooseLocation": {
+            "version": "1.0.9",
+            "provider": "wx76a9a06e5b4e693e"
+        },
+        "routePlan": {
+            "version": "1.0.18",
+            "provider": "wx50b5593e81dd937a"
+        }
+    }
+}

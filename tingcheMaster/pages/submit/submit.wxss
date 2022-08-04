@@ -1,0 +1,197 @@
+page{
+    margin-top: 160rpx;
+}
+
+  .group_5 {
+    margin-top: 56rpx;
+    padding: 0 2rpx;
+  }
+  .text_2 {
+    margin-left: 22rpx;
+    color: #686868;
+    font-size: 28rpx;
+    line-height: 40rpx;
+  }
+  .text_4 {
+    margin-left: 18rpx;
+    color: #686868;
+    font-size: 28rpx;
+    line-height: 40rpx;
+    width: 100%;
+  }
+  .page {
+    background-color: #ffffffff;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+  }
+  .img-wrap{
+      display: inline-block;
+  }
+  .group_3 {
+    padding: 32rpx 40rpx 54rpx;
+    flex: 1 1 auto;
+    overflow-y: auto;
+  }
+  .text_1 {
+    margin-left: 20rpx;
+    align-self: flex-start;
+    color: #929292;
+    font-size: 28rpx;
+    font-weight: 500;
+    line-height: 40rpx;
+  }
+  .image-wrapper_1 {
+    margin-left: 10rpx;
+    padding: 77rpx 0;
+    align-self: flex-start;
+    background-color: #f7f7f7;
+    border-radius: 4rpx;
+    width: 180rpx;
+    height: 180rpx;
+  }
+  .view_2 {
+    margin-top: 44rpx;
+  }
+  .group_6 {
+    margin-top: 56rpx;
+  }
+  .group_7 {
+    margin-top: 50rpx;
+    padding-left: 4rpx;
+  }
+  .view_5 {
+    margin-top: 50rpx;
+  }
+  .button {
+    margin-top: 282rpx;
+    padding: 18rpx 0;
+    background-color: #0819ff;
+    border-radius: 16rpx;
+  }
+
+  .iconImage {
+    width: 32rpx;
+    height: 32rpx;
+  }
+
+  .text_7 {
+    margin-left: 18rpx;
+    color: #686868;
+    font-size: 28rpx;
+    line-height: 40rpx;
+  }
+  .group_8 {
+    margin: 6rpx 0;
+  }
+  .switch {
+    border-radius: 26rpx;
+    width: 96rpx;
+    height: 52rpx;
+  }
+
+  .text_10 {
+    color: #ffffff;
+    font-size: 32rpx;
+    font-weight: 500;
+    line-height: 44rpx;
+  }
+
+  .text_8 {
+    margin-left: 20rpx;
+    color: #686868;
+    font-size: 28rpx;
+    line-height: 40rpx;
+  }
+  .back{
+      position: fixed;
+      top: 116rpx;
+      left: 40rpx;
+      width: 32rpx;
+      height: 32rpx;
+  }
+  .input{
+    font-size: 28rpx;
+    margin-left: 10rpx;
+  }
+  .info{
+margin-left: 10rpx;
+    font-size: 26rpx;
+  }
+  .delete{
+      width: 32rpx;
+      height: 32rpx;
+      position: absolute;
+  }
+  .imglist{
+    display: inline-block;
+  }
+  .item{
+    display: inline-block;
+  }
+  .text_price {
+    margin-left: 18rpx;
+    color: #0819ff;
+    font-size: 28rpx;
+    line-height: 40rpx;
+  }
+  .text_sort {
+      margin-left: 18rpx;
+      color: #686868;
+      font-size: 28rpx;
+      line-height: 40rpx;
+  }
+  
+/* swtich整体大小 */
+.wx-switch-input{
+  width: 100rpx !important;
+  height: 57rpx !important;
+}
+/* false的样式 */
+.wx-switch-input::before{
+  width: 100rpx !important;
+  height: 52rpx !important;
+}
+/* true的样式 */
+.wx-switch-input::after{
+  width: 57rpx !important;
+  height: 52rpx !important;
+}
+textarea{
+  height: 80px;
+}
+
+.imgbox{
+  width: 100%;
+  min-height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content:first baseline;
+  flex-wrap: wrap;
+}
+.imgbox image{
+  width: 180rpx;
+  height: 180rpx;
+}
+.add{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+    background-color: #f7f7f7;
+}
+.delete{
+  position: absolute;
+  top: -16rpx;
+  right: -16rpx;
+}
+.titlearea{
+  margin-bottom: 40rpx;
+}
+.upload{
+    width: 20rpx;
+    height: 20rpx;
+}

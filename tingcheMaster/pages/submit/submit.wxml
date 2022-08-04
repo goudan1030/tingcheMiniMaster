@@ -1,0 +1,72 @@
+<view class="flex-col page">
+  <view class="flex-col group_3">
+    <view class="titlearea">
+      <input class="input" bindinput="getTitle" name="" id="" cols="30" rows="6" placeholder="请输入车位标题" focus="{{inputShowed}}"></input>
+    </view>
+    <textarea class="info" bindinput="getInfo" name="" id="" cols="30" rows="6" placeholder="请输入车位详情"></textarea>
+    <!-- 图片上传 -->
+    <view class="imgbox">
+      <!-- 存放上传的图片的盒子 -->
+          <view class="add">
+            <!-- 图片缩略图  -->
+            <view>
+                <image wx:if="{{isUpload==true}}" src="{{imgSrc}}" mode="aspectFill"  bindtap="chooseImage"></image>
+                <image wx:if="{{isUpload==false}}" src="../../images/upload.svg" mode="aspectFill"  bindtap="chooseImage" ></image>
+            </view>
+            
+            <!-- 移除图片的按钮  -->
+          </view>
+    </view>
+      <!-- 所在位置 -->
+      <view>
+        <view class="flex-row group_5 view_2" bindtap="getLocation">
+      <image
+        src="../../images/location.svg"
+        class="iconImage"
+      />
+      <view class="text_4" >所在位置:{{address.name}}</view>
+    </view>
+    <!-- 联系电话 -->
+    <view class="flex-row group_5">
+      <image
+        src="../../images/phone.svg"
+        class="iconImage"
+      />
+      <input type="number" bindinput="getPhone" placeholder="联系电话" class="text_4"/>
+    </view>
+    <!-- 出租价格 -->
+    <view class="justify-between group_7">
+      <view class="flex-row group_8">
+      <image
+        src="../../images/price.svg"
+        class="iconImage"
+      />
+      <input type="number" bindinput="getPrice" placeholder="出租价格" class="text_price"/>
+      </view>
+      <text class="text_sort">/月</text>
+    </view>
+    <!-- 月付 -->
+    <view class="justify-between group_7">
+      <view class="flex-row group_8">
+        <image
+          src="../../images/monthly.svg"
+          class="iconImage"
+        />
+        <text class="text_8">是否可月付</text>
+      </view>
+      <switch checked="{{carMonthly}}" bindchange="switch1Change" color="#0819ff"></switch>
+    </view>
+    <!-- 标签
+    <view class="flex-row group_4 view_5">
+      <image
+        src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/61c1649a5a7e3f0310bf6b52/62baa5f8402b8f00118712e0/16571776299125139651.png"
+        class="image_12"
+      />
+      <text class="text_2">车位标签</text>
+    </view> -->
+  </view>
+    <button form-type="submit" class="flex-col items-center button width:355rpx" bindtap="sumbit"><text class="text_10">马上发布</text></button>
+    <!-- <view class="flex-col items-center button" bindtap="sumbit"><text class="text_10">马上发布</text></view> -->
+  </view>
+  <image src="../../images/back.svg" class="back" bindtap="back"></image>
+</view>

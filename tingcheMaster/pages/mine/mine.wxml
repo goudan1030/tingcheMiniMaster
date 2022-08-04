@@ -1,0 +1,80 @@
+<view class="container">
+    <!-- 登录按钮 未登录状态下-->
+    <view  wx:if="{{login==false}}" class="login flex-col items-center" bindtap="openLogin" ><text class="text_1">请先登录</text></view>
+    <!-- 登录按钮 登录状态下-->
+    <view  wx:if="{{login==true}}">
+    <view class="flex-col group_4">
+    <view class="flex-col items-center section_3">
+        <text class="text_1">你好呀，{{userInfo.nickName}}</text>
+    </view>
+    <view class="flex-col items-center section_4">
+      <text class="text_3">1</text>
+      <text class="text_point">点赞</text>
+    </view>
+    <image src="{{userInfo.avatarUrl}}" class="image_user"/>
+    </view>
+    </view>
+    <!-- 遮罩层 -->
+    <view class="commodity_Sharing" wx:if="{{commodityLogin}}" catchtouchmove="{{commodityLogin}}"  >
+    <view class="section_9">
+        <image src="../../images/close.png" class="close" bindtap="close"></image>
+        <view class="somsar_txt_top">请先登录</view>
+        <!-- <view>账号</view> -->
+        <!-- <view>密码</view> -->
+        <view class="login_area flex-col items-center log" bindtap="getProfile"><text class="text_9 ">微信快捷登录</text></view>
+    </view>
+    </view>
+    <!-- 设置列表1 -->
+    <view class="flex-col list-item">
+    <view class="flex-col group_3 view_2">
+        <view class="flex-row section_5">
+        <image
+            src="../../images/about.svg"
+            class="image_6"
+        />
+        <text class="text_4">关于我们</text>
+        </view>
+        <view class="flex-row section_5">
+        <image
+            src="../../images/like.svg"
+            class="image_6"
+        />
+        <text class="text_4">我的收藏</text>
+        </view>
+    </view>
+    <view class="flex-row section_5">
+        <image
+        src="../../images/sub.svg"
+        class="image_6"
+        />
+        <text class="text_4">我的发布</text>
+    </view>
+    </view>
+    <!-- 设置列表2 -->
+    <view class="flex-col list-item section_">
+    <view class="flex-row section_5">
+        <image
+        src="../../images/setting.svg"
+        class="image_6"
+        />
+        <text class="text_4">我的设置</text>
+    </view>
+    <view class="flex-row section_5">
+        <image
+        src="../../images/yinsi.svg"
+        class="image_6"
+        />
+        <text class="text_4">隐私政策</text>
+    </view>
+    </view>
+
+    <view   wx:if="{{login==true}}" class="flex-col list-item section_" bindtap="logout">
+        <view class="flex-row section_5">
+        <image src="../../images/logout.svg" class="image_6"></image>
+        <text class="text_4">退出登录</text>
+        </view>
+    </view>
+    <view class="userarea"  bindtap="back">
+        <image src="../../images/back.svg" class="back"></image>
+    </view>
+</view>
